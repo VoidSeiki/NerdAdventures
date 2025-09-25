@@ -10,4 +10,5 @@ package model;
  */
 public class player {
     int vida;
+    int velocidade;
 }
