@@ -4,7 +4,7 @@
  */
 package view;
 
-import Control.*;
+import Control.ControlTela;
 
 /**
  *
@@ -99,7 +99,7 @@ public class TelaInicial extends javax.swing.JFrame {
     ControlTela viado;
 
     public void ini(){
-        viado = 
-    }
+        viado = new ControlTela(jDesktopPane1);
+                }
     
 }
