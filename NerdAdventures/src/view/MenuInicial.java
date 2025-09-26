@@ -81,9 +81,21 @@ public class MenuInicial extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-      System.exit(0); // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+   private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+      Integer a = JOptionPane.showConfirmDialog(jButton3, "sair?");
+      if(a.intValue() == 0){
+          System.exit(0);
+          
+      }
+    }                                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        JOptionPane.showMessageDialog(null, "ação ainda não suportada");        // TODO add your handling code here:
+    }                                        
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+JOptionPane.showMessageDialog(null, "ação ainda não suportada");        // TODO add your handling code here:
+    }                                        
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
