@@ -17,6 +17,7 @@ public class TelaInicial extends javax.swing.JFrame {
      */
     public TelaInicial() {
         initComponents();
+        ini();
     }
 
     /**
@@ -100,6 +101,6 @@ public class TelaInicial extends javax.swing.JFrame {
 
     public void ini(){
         viado = new ControlTela(jDesktopPane1);
-                }
+    }
     
 }
