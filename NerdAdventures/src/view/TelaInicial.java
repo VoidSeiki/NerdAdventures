@@ -104,6 +104,7 @@ public class TelaInicial extends javax.swing.JFrame {
         viado = new ControlTela(jDesktopPane1);
         try{
             setIconImage(ImageIO.read(getClass().getResource("/img/icon.png")));
+            setTitle("Nerd Adventure");
         }catch(Exception e){
             System.out.println(e.toString());
         }
