@@ -19,6 +19,9 @@ public class TelaInicial extends javax.swing.JFrame {
     public TelaInicial() {
         initComponents();
         ini();
+        controlTela.reciveItself(controlTela);
+        controlTela.openTelas();
+        controlTela.openTelaIni();
     }
 
     /**
@@ -98,10 +101,10 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     // End of variables declaration//GEN-END:variables
     
-    ControlTela viado;
+    ControlTela controlTela;
 
     public void ini(){
-        viado = new ControlTela(jDesktopPane1);
+        controlTela = new ControlTela(jDesktopPane1);
         try{
             setIconImage(ImageIO.read(getClass().getResource("/img/icon.png")));
             setTitle("Nerd Adventure");

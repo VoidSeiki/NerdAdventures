@@ -16,7 +16,13 @@ import view.*;
 public class ControlTela {
     JDesktopPane tela;
     
+    //telas gerais=========================
+    exitConfirm telaExit;
     MenuInicial telaIni;
+    //=====================================
+    //ela mesma para passar as outras telas
+    ControlTela controlTela;
+    //=====================================
     
 
     public ControlTela() {
@@ -24,13 +30,16 @@ public class ControlTela {
 
     public ControlTela(JDesktopPane tela) {
         this.tela = tela;
-        openTelas();
-        openTelaIni();
+        
+    }
+    
+    public void reciveItself(ControlTela controlTela){
+        this.controlTela = controlTela;
     }
     
     public void openTelas(){
-        telaIni = new MenuInicial();
-        
+        telaIni = new MenuInicial(controlTela);
+        telaExit = new exitConfirm(controlTela);
     }
     
     public void openTelaIni(){
@@ -40,5 +49,14 @@ public class ControlTela {
         telaIni.setLocation(0, 0);
         tela.add(telaIni);
         telaIni.setVisible(true);
+    }
+    
+    public void openTelaExit(){
+        tela.removeAll();
+        tela.updateUI();
+        telaExit.setSize(tela.getSize());
+        telaExit.setLocation(0, 0);
+        tela.add(telaExit);
+        telaExit.setVisible(true);
     }
 }

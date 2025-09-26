@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+import Control.ControlTela;
+
 /**
  *
  * @author kyagu
@@ -12,9 +15,12 @@ public class MenuInicial extends javax.swing.JPanel {
 
     /**
      * Creates new form MenuInicial
+     * @param controlTela
      */
-    public MenuInicial() {
+    public MenuInicial(ControlTela controlTela) {
         initComponents();
+        this.controlTela = controlTela;
+        ini();
     }
 
     /**
@@ -40,8 +46,18 @@ public class MenuInicial extends javax.swing.JPanel {
         jLabel1.setText("NERD ADVENTURE");
 
         jButton1.setText("JOGAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("CONFIGURAÇÕES");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("SAIR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -81,21 +97,18 @@ public class MenuInicial extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JOptionPane.showMessageDialog(jButton1, "ação ainda não suportada");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JOptionPane.showMessageDialog(jButton2, "ação ainda não suportada");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-      Integer a = JOptionPane.showConfirmDialog(jButton3, "sair?");
-      if(a.intValue() == 0){
-          System.exit(0);
-          
-      }
+      controlTela.openTelaExit();
     }                                        
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        JOptionPane.showMessageDialog(null, "ação ainda não suportada");        // TODO add your handling code here:
-    }                                        
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-JOptionPane.showMessageDialog(null, "ação ainda não suportada");        // TODO add your handling code here:
-    }                                        
+                                       
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -104,4 +117,11 @@ JOptionPane.showMessageDialog(null, "ação ainda não suportada");        // TO
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+    
+    ControlTela controlTela;
+    
+    private void ini(){
+        
+    }
+    
 }
