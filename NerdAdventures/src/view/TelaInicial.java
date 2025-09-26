@@ -5,6 +5,7 @@
 package view;
 
 import Control.ControlTela;
+import javax.imageio.ImageIO;
 
 /**
  *
@@ -101,6 +102,11 @@ public class TelaInicial extends javax.swing.JFrame {
 
     public void ini(){
         viado = new ControlTela(jDesktopPane1);
+        try{
+            setIconImage(ImageIO.read(getClass().getResource("/img/icon.png")));
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
     }
     
 }
