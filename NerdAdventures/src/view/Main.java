@@ -19,7 +19,7 @@ public class Main extends Application{
     
     @Override
     public void start(Stage stage) throws Exception{
-        Parent telaFX = FXMLLoader.load(getClass().getResource("/telasFXML/adssaddsa.fxml"));
+        Parent telaFX = FXMLLoader.load(getClass().getResource("/telasFXML/TelaParaTestes.fxml"));
         
         Scene cena = new Scene(telaFX);
         
